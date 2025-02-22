@@ -73,7 +73,7 @@ function App() {
           <div className="leaderboard-header">
             <h2>📊 Candidate Interest Analysis</h2>
             <button className="back-btn" onClick={() => setShowLeaderboard(false)}>
-              ← Back to Registration
+              ← Back to Job Details
             </button>
           </div>
           
@@ -153,60 +153,60 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="add-candidates-section">
-          <h2>📱 WhatsApp Screening Registration</h2>
-          <div className="form-container">
-            <div className="input-form">
-              <div className="input-row">
-                <div className="input-group">
-                  <label>Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={newCandidate.name}
-                    onChange={handleInputChange}
-                    placeholder="Enter candidate name"
-                  />
-                </div>
-
-                <div className="input-group">
-                  <label>Phone Number</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={newCandidate.phone}
-                    onChange={handleInputChange}
-                    placeholder="Enter phone number"
-                  />
-                </div>
+        <div className="position-details-section">
+          <div className="position-header">
+            <h2>🎯 Position Details</h2>
+            <div className="position-badge">Active</div>
+          </div>
+          <div className="details-container">
+            <div className="detail-card">
+              <div className="detail-icon">👨‍💻</div>
+              <div className="detail-content">
+                <label>Position</label>
+                <span>React Developer - 1</span>
               </div>
-
-              <div className="button-group">
-                <button className="add-btn" onClick={handleAddCandidate}>
-                  <span>+</span> Add Candidate
-                </button>
-                {candidates.length > 0 && (
-                  <button className="submit-btn" onClick={handleSubmitAll}>
-                    <span>→</span> Begin Screening
-                  </button>
-                )}
+            </div>
+            
+            <div className="detail-card">
+              <div className="detail-icon">📍</div>
+              <div className="detail-content">
+                <label>Location</label>
+                <span>Vadodara, Gujarat</span>
               </div>
             </div>
 
-            {candidates.length > 0 && (
-              <div className="candidates-preview">
-                <h3>Added Candidates ({candidates.length})</h3>
-                <div className="preview-list">
-                  {candidates.map((candidate, index) => (
-                    <div key={index} className="preview-item">
-                      <span className="preview-number">{index + 1}</span>
-                      <span className="preview-name">{candidate.name}</span>
-                      <span className="preview-phone">{candidate.phone}</span>
-                    </div>
-                  ))}
+            <div className="detail-card">
+              <div className="detail-icon">💰</div>
+              <div className="detail-content">
+                <label>Salary Range</label>
+                <span>4 LPA - 6 LPA</span>
+              </div>
+            </div>
+
+            <div className="detail-card">
+              <div className="detail-icon">⚡</div>
+              <div className="detail-content">
+                <label>Required Skills</label>
+                <div className="skills-container">
+                  <span className="skill-tag">ReactJS</span>
+                  <span className="skill-tag">JavaScript</span>
+                  <span className="skill-tag">HTML/CSS</span>
                 </div>
               </div>
-            )}
+            </div>
+
+            <div className="detail-card">
+              <div className="detail-icon">⏳</div>
+              <div className="detail-content">
+                <label>Experience</label>
+                <span>0-2 years</span>
+              </div>
+            </div>
+            
+            <button className="view-leaderboard-btn" onClick={() => setShowLeaderboard(true)}>
+              View Candidate Analysis 
+              <span className="button-icon">→</span>
+            </button>
           </div>
         </div>
       </div>
