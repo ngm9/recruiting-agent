@@ -1,16 +1,26 @@
-[{
+[
+  {
     "name": "Naman",
     "location": 0,
     "React experience": 8,
     "Salary expectations": 5,
     "Previous work experience": 5,
     "total": 18
-  },{
+  },
+  {
     "name": "manas",
     "location": 5,
     "React experience": 8,
     "Salary expectations": 5,
     "Previous work experience": 5,
     "total": 23
+  },
+  {
+    "name": "Ashish",
+    "location": 0,
+    "React experience": 0,
+    "Salary expectations": 8,
+    "Previous work experience": 8,
+    "total": 16
   }
 ]

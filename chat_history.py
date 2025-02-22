@@ -25,7 +25,6 @@ class ChatHistory:
             'content': message,
             'timestamp': datetime.now().isoformat()
         })
-        self.save_history()
     
     def get_history(self, phone_number, limit=10):
         return self.history.get(phone_number, [])[-limit:] 
